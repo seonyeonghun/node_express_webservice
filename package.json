@@ -1,0 +1,15 @@
+{
+  "name": "node_express_website",
+  "version": "1.0.0",
+  "description": "node.js와 express.js 그리고 mysql 데이터베이스를 이용한 웹서비스 개발",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
