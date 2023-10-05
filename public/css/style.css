@@ -1,0 +1,81 @@
+@charset "utf-8";
+:root {
+  --primary-color: black;
+  --secondary-color: white;
+  --third-color: gray;
+  --bg-orange: orange;
+}
+/* -------------- common style ---------------- */
+.mx-auto {
+  margin: 0 auto;
+}
+.d-flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.h600 {
+  height: 600px;
+  background: url("../images/cover_img.jpg") no-repeat center / cover;
+}
+.gap-1 {
+  gap: 1rem;
+}
+.gap-2 {
+  gap: 2rem;
+}
+.gap-3 {
+  gap: 3rem;
+}
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+.text-white {
+  color: var(--secondary-color);
+}
+.caps {
+  text-transform: capitalize;
+}
+.upper {
+  text-transform: uppercase;
+}
+/* ------------------- header ---------------- */
+.container {
+  max-width: 1000px;
+}
+
+.slogan_title {
+  font-size: 6rem;
+  margin: 7rem 0 0 0;
+}
+.slogan_text {
+  border-top: 1px solid var(--secondary-color);
+  padding: 0.5rem 0 0 0;
+  margin: 1rem 0 2rem 0;
+  font-size: 1.25rem;
+  text-shadow: 1px 1px 3px var(--primary-color);
+}
+.btn_request {
+  width: 10rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: 0;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
