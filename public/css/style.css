@@ -6,6 +6,9 @@
   --bg-orange: orange;
 }
 /* -------------- common style ---------------- */
+.d-none {
+  display: none;
+}
 .mx-auto {
   margin: 0 auto;
 }
@@ -46,6 +49,9 @@
 .py-3 {
   padding: 3rem 0;
 }
+.text-center {
+  text-align: center;
+}
 .text-white {
   color: var(--secondary-color);
 }
@@ -55,10 +61,26 @@
 .upper {
   text-transform: uppercase;
 }
-/* ------------------- header ---------------- */
+.hidden {
+  overflow: hidden;
+}
 .container {
   max-width: 1000px;
 }
+.container_wide {
+  width: 100%;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+.flex-3 {
+  flex: 3;
+}
+
+/* ------------------- header ---------------- */
 
 .slogan_title {
   font-size: 6rem;
@@ -78,4 +100,23 @@
   border: 0;
   background: var(--primary-color);
   color: var(--secondary-color);
+}
+
+/* ------------ main > about ------------------ */
+.avatar {
+  width: 300px;
+  height: 300px;
+  background: var(--third-color);
+  border-radius: 50%;
+}
+.my_fan {
+  width: 150px;
+  height: 150px;
+  background: var(--third-color);
+  border-radius: 50%;
+}
+#pf_main > li {
+  background: var(--third-color);
+  height: 350px;
+  flex: 1;
 }
