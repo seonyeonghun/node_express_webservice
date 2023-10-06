@@ -7,7 +7,57 @@ html(lang="ko")
     include includes/comm_style.pug
   body 
     include includes/comm_header.pug
+    h1(class="d-none") about
     main 
+      hgroup(class="text-center py-2")
+        h2(class="caps") about me
+        h3 자기소개
       article 
-        p 자기소개 페이지 입니다.
+        h2(class="d-none") about me
+        div(class="container mx-auto d-flex flex-column align-center")
+          div(class="tabs d-flex gap-1 my-2")
+            button(class="btn btn-active") 교육경험
+            button(class="btn") 업무경험
+            button(class="btn") 사회경험
+          div(class="contents")
+            div(class="edu d-flex gap-2")
+              div(class="edu_cover")
+                img(src="images/edu_cover1.jpg", alt="포스터")
+              div(class="edu_detail")
+                p(class="edu_title") 한울직업전문학교
+                ul(class="list") 
+                  li 과정명 : 스마트UXUI 디자인 과정
+                  li 교육기간 : 2023.06.07 ~ 11.20 (5개월)
+                  li 교육내용 : 웹 및 그래픽 디자인 과정                  
+            div(class="work d-none")
+                p 이전에 근무했던 회사나 담당했던 업무내용
+            div(class="etc d-none")
+                p 봉사활동, 사회공헌활동, 등등..
+            div(class="edu d-flex gap-2 my-2")
+              div(class="edu_cover")
+                img(src="images/edu_cover1.jpg", alt="포스터")
+              div(class="edu_detail")
+                p(class="edu_title") 한울회계세무학원
+                ul(class="list") 
+                  li 과정명 : 스마트UXUI 디자인 과정
+                  li 교육기간 : 2023.06.07 ~ 11.20 (5개월)
+                  li 교육내용 : 웹 및 그래픽 디자인 과정                  
+            div(class="work d-none")
+                p 이전에 근무했던 회사나 담당했던 업무내용
+            div(class="etc d-none")
+                p 봉사활동, 사회공헌활동, 등등..
+            div(class="edu d-flex gap-2")
+              div(class="edu_cover")
+                img(src="images/edu_cover1.jpg", alt="포스터")
+              div(class="edu_detail")
+                p(class="edu_title") 한울전기학원
+                ul(class="list") 
+                  li 과정명 : 스마트UXUI 디자인 과정
+                  li 교육기간 : 2023.06.07 ~ 11.20 (5개월)
+                  li 교육내용 : 웹 및 그래픽 디자인 과정                  
+            div(class="work d-none")
+                p 이전에 근무했던 회사나 담당했던 업무내용
+            div(class="etc d-none")
+                p 봉사활동, 사회공헌활동, 등등..
+        
     include includes/comm_footer.pug
