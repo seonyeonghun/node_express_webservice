@@ -4,6 +4,8 @@
   --secondary-color: white;
   --third-color: gray;
   --bg-orange: orange;
+  --line-color: #a3a3a3;
+  --point-color: #f62b2b;
 }
 /* -------------- common style ---------------- */
 .d-none {
@@ -17,6 +19,9 @@
 }
 .d-flex {
   display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
 .flex-column {
   flex-direction: column;
@@ -160,4 +165,33 @@
 .pf {
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* ----------------- /contact -------------------- */
+.form_lists li {
+  border-top: 1px solid var(--line-color);
+  padding: 1rem 0;
+}
+.d-flex label {
+  display: block;
+  flex: 0 0 10rem;
+  font-weight: 700;
+}
+.d-flex textarea {
+  flex: 0 0 50%;
+}
+.tip {
+  color: var(--third-color);
+}
+.red {
+  color: var(--point-color);
+}
+
+[type="text"],
+[type="tel"],
+[type="email"],
+textarea {
+  padding: 0.25rem 0.5rem;
+  outline: none;
+  border: 1px solid var(--line-color);
 }

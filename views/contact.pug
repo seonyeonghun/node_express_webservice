@@ -14,5 +14,54 @@ html(lang="ko")
         h3 작업요청 및 문의
       article 
         h2(class="d-none") main - contact
-        
+        div(class="container mx-auto")
+          form(id="request_form")
+            legend(class="d-none") 요청 폼
+            fieldset 
+              ul(class="form_lists") 
+                li(class="d-flex gap-2") 
+                  label 구분
+                    span(class="red") *
+                  div(class="d-flex gap-2") 
+                    div
+                      input(type="radio", name="type", checked)/ 작업요청
+                    div
+                      input(type="radio", name="type")/ 문의
+                li(class="d-flex gap-2") 
+                  label 이름
+                    span(class="red") *
+                  div(class="d-flex gap-2") 
+                    input(type="text", required)/ 
+                    span(class="tip") (예) 홍길동
+                li(class="d-flex gap-2") 
+                  label 연락처
+                    span(class="red") *
+                  div(class="d-flex gap-2")  
+                    input(type="tel", required)/ 
+                    span(class="tip") ※ 연락처 입력시 -는  입력하지 않습니다.
+                li(class="d-flex gap-2") 
+                  label 이메일
+                  div(class="d-flex gap-2")  
+                    input(type="email", required)/ 
+                    span(class="tip") (예) june@naver.com
+                li(class="d-flex gap-2") 
+                  label 제목
+                    span(class="red") *
+                  div(class="d-flex gap-2")  
+                    input(type="text", required)/ 
+                    span(class="tip") (예) 디자인 의뢰합니다.
+                li(class="d-flex gap-2") 
+                  label 내용*
+                  div(class="d-flex gap-2") 
+                    textarea(rows="10", cols="40", placeholder="담당자 확인 후 연락드리겠습니다.")
+                    span(class="tip") (예)  안녕하세요, 작업요청 드립니다. 
+                                      br 
+                                      | 기한은 일주일이고요, (가칭)한울에듀
+                                      | 홈페이지 메인 및 서브 10p에 대한 화면설계
+                                      | 및 디자인 작업 입니다.
+                                      br
+                                      | 가능하실까요?
+                li(class="d-flex gap-2 justify-center")                   
+                    input(class="btn btn-active", type="submit", value="등록")
+                    input(class="btn", type="reset", value="취소")
     include includes/comm_footer.pug
