@@ -12,6 +12,9 @@
 .mx-auto {
   margin: 0 auto;
 }
+.d-grid {
+  display: grid;
+}
 .d-flex {
   display: flex;
 }
@@ -88,7 +91,13 @@
 .flex-3 {
   flex: 3;
 }
-
+[data-type="web"],
+[data-type="graphic"] {
+  background: var(--third-color);
+  height: 260px;
+  width: 250px;
+  display: inline-block;
+}
 /* ------------------- header ---------------- */
 
 .slogan_title {
@@ -145,4 +154,10 @@
 }
 .list {
   list-style: disc inside;
+}
+
+/* ----------------- /portfolio -------------------- */
+.pf {
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }

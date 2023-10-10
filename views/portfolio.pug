@@ -7,7 +7,36 @@ html(lang="ko")
     include includes/comm_style.pug
   body 
     include includes/comm_header.pug
+    h1(class="d-none") portfolio
     main 
+      hgroup(class="text-center py-2")
+        h2(class="caps") web &#124; graphic portfolio
+        h3 웹 및 그래픽 포트폴리오
       article 
-        p 포트폴리오 페이지 입니다.
+        h2(class="d-none") main - portfolio
+        div(class="container mx-auto d-flex flex-column align-center")
+          div(class="tabs d-flex gap-1 my-2")
+            button(class="btn btn-active") All
+            button(class="btn") Web
+            button(class="btn") Graphic
+          div(class="contents")
+            ul(class="pf d-grid gap-1") 
+              li 
+                img(src="images/pf_cover1.jpg", alt="web", data-type="web")
+              li 
+                img(src="images/pf_cover2.jpg", alt="web", data-type="web")
+              li 
+                img(src="images/pf_cover3.jpg", alt="web", data-type="web")
+              li 
+                img(src="images/pf_cover4.jpg", alt="web", data-type="graphic")
+              li 
+                img(src="images/pf_cover5.jpg", alt="web", data-type="web")
+              li 
+                img(src="images/pf_cover6.jpg", alt="web", data-type="graphic")
+              li 
+                img(src="images/pf_cover7.jpg", alt="web", data-type="web")
+              li 
+                img(src="images/pf_cover8.jpg", alt="web", data-type="graphic")
+              li 
+                img(src="images/pf_cover9.jpg", alt="web", data-type="web")
     include includes/comm_footer.pug
