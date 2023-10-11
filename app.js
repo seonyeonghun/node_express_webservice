@@ -15,12 +15,12 @@ const conn = mysql.createConnection({
   user: "kjca1117",
   password: "kjca24106!",
   database: "contact",
-  dateString: "date"
+  dateString: "date",
 });
 
 // simple query
 conn.query("SELECT * FROM contact.contacts", function (err, results, fields) {
-  console.log(results); // 서버로부터 반환되는 결과행  
+  console.log(results); // 서버로부터 반환되는 결과행
 });
 
 // routing : 경로에 해당하는 파일을 지정하는 방법
@@ -49,14 +49,20 @@ app.post("/contactAdd", (req, res) => {
   VALUES ('${type}', '${name}', '${phone}', '${email}', '${title}', '${memo}', CURRENT_DATE())`;
 
   // query 실행명령
-  conn.query(
-    sql,
-    function(err, results, fields) {
-      if(err) throw error;
-      console.log('정상적으로 데이터가 입력 되었습니다.');
-      res.send("<script>alert('등록되었습니다'); location.href='/';</script>");
-    }
-  );
+  conn.query(sql, function (err, results, fields) {
+    if (err) throw error;
+    console.log("정상적으로 데이터가 입력 되었습니다.");
+    res.send("<script>alert('등록되었습니다'); location.href='/';</script>");
+  });
+});
+
+app.get("/contactList", (req, res) => {
+  // http://localhost/contactList 접속하는 방법
+  let sql = "SELECT * FROM contact.contacts ORDER BY id DESC;";
+  conn.query(sql, function (err, results, fields) {
+    //console.log(results); // results contains rows returned by server
+    res.render("contactList", {dataset: results})
+  });
 });
 
 app.listen(3000, () => {
