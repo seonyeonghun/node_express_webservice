@@ -15,7 +15,7 @@ html(lang="ko")
       article 
         h2(class="d-none") main - contact
         div(class="container mx-auto")
-          form(id="request_form")
+          form(id="request_form", action="/contactAdd", method="post")
             legend(class="d-none") 요청 폼
             fieldset 
               ul(class="form_lists") 
@@ -24,36 +24,36 @@ html(lang="ko")
                     span(class="red") *
                   div(class="d-flex gap-2") 
                     div
-                      input(type="radio", name="type", checked)/ 작업요청
+                      input(type="radio", name="type", value="1" checked)/ 요청
                     div
-                      input(type="radio", name="type")/ 문의
+                      input(type="radio", value="2", name="type")/ 문의
                 li(class="d-flex gap-2") 
                   label 이름
                     span(class="red") *
                   div(class="d-flex gap-2") 
-                    input(type="text", required)/ 
+                    input(type="text", name="name" required)/ 
                     span(class="tip") (예) 홍길동
                 li(class="d-flex gap-2") 
                   label 연락처
                     span(class="red") *
                   div(class="d-flex gap-2")  
-                    input(type="tel", required)/ 
+                    input(type="tel", name="phone", required)/ 
                     span(class="tip") ※ 연락처 입력시 -는  입력하지 않습니다.
                 li(class="d-flex gap-2") 
                   label 이메일
                   div(class="d-flex gap-2")  
-                    input(type="email", required)/ 
+                    input(type="email", name="email", required)/ 
                     span(class="tip") (예) june@naver.com
                 li(class="d-flex gap-2") 
                   label 제목
                     span(class="red") *
                   div(class="d-flex gap-2")  
-                    input(type="text", required)/ 
+                    input(type="text", name="title", required)/ 
                     span(class="tip") (예) 디자인 의뢰합니다.
                 li(class="d-flex gap-2") 
                   label 내용*
                   div(class="d-flex gap-2") 
-                    textarea(rows="10", cols="40", placeholder="담당자 확인 후 연락드리겠습니다.")
+                    textarea(rows="10", cols="40", name="memo", placeholder="담당자 확인 후 연락드리겠습니다.")
                     span(class="tip") (예)  안녕하세요, 작업요청 드립니다. 
                                       br 
                                       | 기한은 일주일이고요, (가칭)한울에듀
