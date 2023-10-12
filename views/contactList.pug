@@ -17,14 +17,15 @@ html(lang="ko")
         div(class="container mx-auto")
           table(class="contact_list") 
             tr 
-              th 번호
-              th 구분
-              th 이름
-              th 연락처
-              th 이메일
+              th(class="th-5") 번호
+              th(class="th-5") 구분
+              th(class="th-5") 이름
+              th(class="th-10") 연락처
+              th(class="th-10") 이메일
               th 제목
               th 내용
               th 등록일
+              th(class="th-5") 관리
             each data in dataset
               tr 
                 td= data.id 
@@ -35,5 +36,7 @@ html(lang="ko")
                 td= data.title 
                 td= data.memo 
                 td= data.regdate
+                td
+                  button(onclick=`location.href='/contactDel?id=${data.id}'`) 삭제
 
     include includes/comm_footer.pug

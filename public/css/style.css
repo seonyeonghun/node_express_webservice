@@ -4,6 +4,7 @@
   --secondary-color: white;
   --third-color: gray;
   --bg-orange: orange;
+  --bg-whitegray: #efefef;
   --line-color: #a3a3a3;
   --point-color: #f62b2b;
 }
@@ -202,11 +203,19 @@ textarea {
 .contact_list td {
   border: 1px solid var(--primary-color);
   border-collapse: collapse;
+  font-size: 0.875rem;
 }
 .contact_list th,
 .contact_list td {
   padding: 0.5rem 1rem;
 }
 .contact_list th {
-  background: var(--third-color);
+  background: var(--bg-whitegray);
+}
+.contact_list .th-5 {
+  width: 5%;
+  white-space: nowrap;
+}
+.contact_list .th-10 {
+  width: 10%;
 }

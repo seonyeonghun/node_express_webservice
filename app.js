@@ -15,7 +15,7 @@ const conn = mysql.createConnection({
   user: "kjca1117",
   password: "kjca24106!",
   database: "contact",
-  dateString: "date",
+  dateStrings: "date",
 });
 
 // simple query
@@ -46,7 +46,7 @@ app.post("/contactAdd", (req, res) => {
   let memo = req.body.memo; // 내용
   //console.log(type, name, phone, email, title, memo);
   let sql = `INSERT INTO contact.contacts (gubun, name, phone, email, title, memo, regdate)
-  VALUES ('${type}', '${name}', '${phone}', '${email}', '${title}', '${memo}', CURRENT_DATE())`;
+  VALUES ('${type}', '${name}', '${phone}', '${email}', '${title}', '${memo}', DATE_FORMAT(now(), '%y/%m/%d'))`;
 
   // query 실행명령
   conn.query(sql, function (err, results, fields) {
@@ -55,13 +55,26 @@ app.post("/contactAdd", (req, res) => {
     res.send("<script>alert('등록되었습니다'); location.href='/';</script>");
   });
 });
-
+// 삭제용 쿼리를 작성 :3000/contactDel?id=1
+app.get("/contactDel", (req, res) => {
+  let del_no = req.query.id;
+  console.log("삭제하려는 문의 번호 : " + del_no);
+  let sql = `DELETE from contact.contacts WHERE id=${del_no}`;
+  // query 실행명령
+  conn.query(sql, function (err, results, fields) {
+    if (err) throw error;
+    console.log("문의가 삭제되었습니다."); //
+    res.send(
+      "<script>alert('삭제 되었습니다'); location.href='/contactList';</script>"
+    );
+  });
+});
 app.get("/contactList", (req, res) => {
   // http://localhost/contactList 접속하는 방법
   let sql = "SELECT * FROM contact.contacts ORDER BY id DESC;";
   conn.query(sql, function (err, results, fields) {
     //console.log(results); // results contains rows returned by server
-    res.render("contactList", {dataset: results})
+    res.render("contactList", { dataset: results });
   });
 });
 
