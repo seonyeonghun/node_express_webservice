@@ -1,11 +1,13 @@
 const mysql = require("mysql2");
 const express = require("express");
 const app = express();
+const logger = require("morgan");
 
 // view template engine
 app.set("view engine", "pug");
 app.set("views", __dirname + "/views");
 
+app.use(logger("dev"));
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 
@@ -35,6 +37,14 @@ app.get("/portfolio", (req, res) => {
 });
 app.get("/contact", (req, res) => {
   res.render("contact"); // help.pug 찾아서 서버에서 렌더링해라!
+});
+// login
+app.get("/signin", (req, res) => {
+  res.render("login");
+});
+// join
+app.get("/signup", (req, res) => {
+  res.render("join");
 });
 app.post("/contactAdd", (req, res) => {
   // 등록하려는 문의 정보를 서버로 전송!
@@ -78,6 +88,9 @@ app.get("/contactList", (req, res) => {
   });
 });
 
+app.post("/userAdd", (req, res) => {
+  console.log(req.body);
+});
 app.listen(3000, () => {
   console.log("server is listening on port : 3000!");
 });
