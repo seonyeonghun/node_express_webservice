@@ -1,0 +1,35 @@
+doctype html
+html(lang="ko")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title 웹디자이너 선영훈 포트폴리오
+    include includes/comm_style.pug
+  body 
+    include includes/comm_header.pug
+    h1(class="d-none") login
+    main 
+      hgroup(class="text-center py-2")
+        h2(class="caps") member login
+        h3 회원 로그인
+      article 
+        h2(class="d-none") member
+        div(class="container mx-auto d-flex flex-column align-center")
+          form(method="post", action="/userAdd")
+            legend(class="d-none")
+            fieldset 
+              ul(class="signin")
+                li(class="d-flex justify-between")
+                  label 아이디
+                    span(class="red") *
+                  input(type="text", id="user_id", name="user_id", required, placeholder="예)이메일 형식")
+                li(class="d-flex justify-between")
+                  label 비밀번호
+                    span(class="red") *
+                  input(type="password", id="user_pw", name="user_pw", required)
+                li(class="d-flex justify-between")
+                  button(class="btn", onclick="alert('준비중입니다.')") 회원가입
+                  button(class="btn", onclick="alert('준비중입니다.')") 로그인
+                li(class="d-flex")
+                  a(href="#") 아이디/비밀번호 찾기
+    include includes/comm_footer.pug        

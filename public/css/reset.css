@@ -3,22 +3,26 @@
 *::before,
 *::after {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
-a, a:link {
+a,
+a:link {
   text-decoration: none;
-  color: inherit
+  color: inherit;
 }
 
-ul, ol {
-  list-style: none
+ul,
+ol {
+  list-style: none;
 }
 
-form, fieldset {
-  border: 0
+form,
+fieldset {
+  border: 0;
+  width: 100%;
 }
 
 input {
-  outline: none
+  outline: none;
 }

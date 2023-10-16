@@ -190,6 +190,7 @@
 
 [type="text"],
 [type="tel"],
+[type="password"],
 [type="email"],
 textarea {
   padding: 0.25rem 0.5rem;
@@ -218,4 +219,19 @@ textarea {
 }
 .contact_list .th-10 {
   width: 10%;
+}
+
+/* --------------- /sign ------------------ */
+.signup li {
+  margin: 0 0 1rem 0;
+}
+.signup label {
+  flex: 2;
+}
+.signup [type="text"],
+.signup [type="password"],
+.signup [type="tel"],
+.signup [type="email"],
+.signup [type="file"] {
+  flex: 5;
 }
